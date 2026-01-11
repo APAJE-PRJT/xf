@@ -1,0 +1,144 @@
+--==================================================
+-- 🏔️ RAYFIELD MOUNTAIN HUB
+-- Total | Auto Detect | Highlight
+--==================================================
+
+-- ===== LOAD RAYFIELD =====
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+-- ===== SERVICES =====
+local MarketplaceService = game:GetService("MarketplaceService")
+local placeId = game.PlaceId
+
+local mapName = "UNKNOWN"
+pcall(function()
+    mapName = MarketplaceService:GetProductInfo(placeId).Name
+end)
+mapName = string.upper(mapName)
+
+-- ===== WINDOW =====
+local Window = Rayfield:CreateWindow({
+    Name = "🏔️ LIST MOUNT VIP",
+    LoadingTitle = "NANAO GAMES",
+    LoadingSubtitle = "GAK VIP GUWEH DOXXING LU",
+    ConfigurationSaving = { Enabled = false }
+})
+
+local Tab = Window:CreateTab("⛰️ Gunung", 4483362458)
+local NotesTab = Window:CreateTab("📝 Notes", 4483362458)
+
+-- ===== NOTES (BUTTON DISCORD) =====
+NotesTab:CreateButton({
+    Name = "📢 Join Discord",
+    Callback = function()
+        setclipboard("https://discord.gg/Hsk4Q5KY2b")
+        Rayfield:Notify({
+            Title = "📋 Discord Copied",
+            Content = "Link Discord disalin ke clipboard",
+            Duration = 4
+            
+        })
+        
+    end
+    
+})
+
+-- NOTES TAMBAHAN
+NotesTab:CreateParagraph({
+    Title = "⭐ NOTES FOR VIP NANAO GAMES",
+    Content = "JANGAN LUPA KIRIM FEEDBACK KE DISCORD ⭐"
+})
+
+-- ===== DATA GUNUNG =====
+local Mountains = {
+
+    ["⭐ MT APEXIA V2"] = { placeId = 140438064820571, script = "https://raw.githubusercontent.com/NanaoGames/fgdj/refs/heads/main/n" },
+    ["🌲 MT JASUN"] = { placeId = 74503112625421, script = "https://raw.githubusercontent.com/NanaoGames/sdg/refs/heads/main/n" },
+    ["⚡ MT VELORA"] = { placeId = 135285569232987, script = "https://raw.githubusercontent.com/NanaoGames/zgdh/refs/heads/main/n" },
+    ["😇 MT MALAIKAT"] = { placeId = 105171425275249, script = "https://raw.githubusercontent.com/NanaoGames/sfh/refs/heads/main/n" },
+    ["🦊 MT WEK"] = { placeId = 127804672565817, script = "https://raw.githubusercontent.com/NanaoGames/gj/refs/heads/main/N" },
+    ["🧸 MT YUBI"] = { placeId = 135461240473398, script = "https://raw.githubusercontent.com/NanaoGames/fgsa/refs/heads/main/n" },
+    ["🗡️ MT SANGKALA"] = { placeId = 103721108378972, script = "https://raw.githubusercontent.com/NanaoGames/fgj/refs/heads/main/n" },
+    ["🐉 MT YAHIHI"] = { placeId = 94315512267840, script = "https://raw.githubusercontent.com/NanaoGames/NS/refs/heads/main/n" },
+    ["🛡️ MT SENOUK"] = { placeId = 88212905513897, script = "https://raw.githubusercontent.com/NanaoGames/NVM/refs/heads/main/n" },
+    ["🎨 MT FREESTYLE"] = { placeId = 92443799068611, script = "https://raw.githubusercontent.com/NanaoGames/dfh/refs/heads/main/n" },
+    ["🌙 MT LUNA"] = { placeId = 121884748950811, script = "https://raw.githubusercontent.com/NanaoGames/DH/refs/heads/main/n" },
+    ["🌊 MT WARU MADURA"] = { placeId = 105855907499823, script = "https://raw.githubusercontent.com/NanaoGames/GL/refs/heads/main/n" },
+    ["🪐 MT YEROO"] = { placeId = 130617502755072, script = "https://raw.githubusercontent.com/NanaoGames/jf/refs/heads/main/n" },
+    ["💎 MT GEMI"] = { placeId = 117948254364533, script = "https://raw.githubusercontent.com/NanaoGames/ghj/refs/heads/main/n" },
+    ["💎 MT GEMAS"] = { placeId = 98363466800903, script = "https://raw.githubusercontent.com/NanaoGames/b/refs/heads/main/n" },
+    ["🍹 MT BIKINI BOTTOM"] = { placeId = 139801759395171, script = "https://raw.githubusercontent.com/NanaoGames/V/refs/eads/main/n" },
+    ["🎬 MT GHIBLI"] = { placeId = 78106422901523, script = "https://raw.githubusercontent.com/NanaoGames/yuju/refs/heads/main/N" },
+    ["🏎️ MT GASPOL"] = { placeId = 90863151616496, script = "https://raw.githubusercontent.com/NanaoGames/XCV/refs/heads/main/n" },
+    ["🌸 MT CHAOS BLOOM"] = { placeId = 115222215967412, script = "https://raw.githubusercontent.com/NanaoGames/SDF/refs/heads/main/z" },
+    ["☁️ MT NEBYA"] = { placeId = 106607455396539, script = "https://raw.githubusercontent.com/NanaoGames/xdd/refs/heads/main/dsf" },
+    ["🌲 MT KANALA"] = { placeId = 113588945154732, script = "https://raw.githubusercontent.com/NanaoGames/daf/refs/heads/main/xxx" },
+    ["🎀 MT YAYAKIN"] = { placeId = 80945057902511, script = "https://raw.githubusercontent.com/NanaoGames/dsfgg/refs/heads/main/sfghg" },
+    ["🍺 MT BEJIRLAH"] = { placeId = 81414127122663, script = "https://raw.githubusercontent.com/NanaoGames/fdfhhh/refs/heads/main/dfgdfgh" },
+    ["⚙️ MT CAE - V 0.2"] = { placeId = 102098778968011, script = "https://raw.githubusercontent.com/NanaoGames/DSFDSGFH/refs/heads/main/sdgfgsd" },
+    ["🌅 MT ANAK SENJA"] = { placeId = 92677874290348, script = "https://raw.githubusercontent.com/NanaoGames/asdgfg/refs/heads/main/fsshh" },
+    ["🍾 MT BOTOL 3"] = { placeId = 123706448062527, script = "https://raw.githubusercontent.com/NanaoGames/SADWDFFGFF/refs/heads/main/ghjgsdss" },
+    ["🔥 MT HEARTH GANG V2"] = { placeId = 89224809507033, script = "https://raw.githubusercontent.com/NanaoGames/fgjgdst/refs/heads/main/adgahg" },
+    ["📈 MT LEVELING"] = { placeId = 80648193166443, script = "https://raw.githubusercontent.com/NanaoGames/sgadh/refs/heads/main/sfdgrj" },
+    ["😂 MT FUNNY"] = { placeId = 117345375295598, script = "https://raw.githubusercontent.com/NanaoGames/SFJGDHR/refs/heads/main/fshge" },
+    ["🌌 MT AETHERIA"] = { placeId = 97937285533780, script = "https://raw.githubusercontent.com/NanaoGames/hgdjdtyj/refs/heads/main/zdfh" },
+    ["🎵 MT FREESTYLE KZL"] = { placeId = 82019924787838, script = "https://raw.githubusercontent.com/NanaoGames/HJKFJ/refs/heads/main/gfstj" },
+    ["🏁 MT FST SPEEDRUN"] = { placeId = 82619747810196, script = "https://raw.githubusercontent.com/NanaoGames/ytjhgfd/refs/heads/main/gfsfg" },
+    ["🏡 MT KITA"] = { placeId = 133858780974321, script = "https://raw.githubusercontent.com/NanaoGames/asdfdgg/refs/heads/main/mountkita" },
+    ["🌀 MT MOLTI"] = { placeId = 126576119458766, script = "https://raw.githubusercontent.com/NanaoGames/edsfgh/refs/heads/main/fedfrg" },
+    ["🛠️ MT SETECU"] = { placeId = 78955895955272, script = "https://raw.githubusercontent.com/robloxonly981-gif/rfgas/refs/heads/main/dws" },
+    ["🌈 MT YAHHASU"] = { placeId = 80764768938398, script = "https://raw.githubusercontent.com/NanaoGames/yahadsfes/refs/heads/main/asd" },
+    ["🏙️ MT SADEWA CITY"] = { placeId = 99851482652804, script = "https://raw.githubusercontent.com/NanaoGames/dsa/refs/heads/main/sddd" },
+    ["💖 MT YAHAYUK PINK"] = { placeId = 133280992386451, script = "https://raw.githubusercontent.com/NanaoGames/fhdf/refs/heads/main/n" },
+    ["🟣 MT YAHAYUK"] = { placeId = 76964310785698,script = "https://raw.githubusercontent.com/NanaoGames/xhk/refs/heads/main/n" },
+    ["🌠 MT VIRELLAN"] = { placeId = 75981225039808,script = "https://raw.githubusercontent.com/NanaoGames/sdjkjyf/refs/heads/main/z" }, 
+}
+
+
+-- ===== TOTAL =====
+local total = 0
+for _ in pairs(Mountains) do total += 1 end
+
+Tab:CreateParagraph({
+    Title = "📊 TOTAL GUNUNG",
+    Content = tostring(total)
+})
+
+-- ===== BUTTONS (BUAT SEKALI) =====
+local Buttons = {}
+
+local function ExecuteMountain(name, data)
+    if not data.script or data.script == "" then
+        Rayfield:Notify({
+            Title = "⚠️ Script Kosong",
+            Content = name,
+            Duration = 3
+        })
+        return
+    end
+    loadstring(game:HttpGet(data.script))()
+end
+
+for name, data in pairs(Mountains) do
+    Buttons[name] = Tab:CreateButton({
+        Name = name,
+        Callback = function()
+            ExecuteMountain(name, data)
+        end
+    })
+end
+
+-- ===== AUTO DETECT + ⭐ HIGHLIGHT =====
+for name, data in pairs(Mountains) do
+    if (data.placeId ~= 0 and data.placeId == placeId) or mapName:find(name) then
+        Rayfield:Notify({
+            Title = "⭐ Map Detected",
+            Content = name,
+            Duration = 5
+        })
+        if Buttons[name] then
+            Buttons[name]:SetName("⭐ "..name)
+        end
+        break
+    end
+end
