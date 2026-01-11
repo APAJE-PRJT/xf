@@ -1,3 +1,4 @@
+
 --==================================================
 -- 🏔️ RAYFIELD MOUNTAIN HUB
 -- Total | Auto Detect | Highlight
@@ -25,7 +26,43 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Tab = Window:CreateTab("⛰️ Gunung", 4483362458)
+local OtherTab = Window:CreateTab("🛠️ Script Lainnya", 4483362458)
 local NotesTab = Window:CreateTab("📝 Notes", 4483362458)
+
+OtherTab:CreateParagraph({
+    Title = "-- SCRIPT UNIVERSAL",
+    Content = "FE DAN VISUAL"
+})
+
+OtherTab:CreateButton({
+    Name = "Eazvy Hub | Animation & Emotes (FE)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Eazvy/public-scripts/main/Universal_Animations_Emotes.lua"))()
+        Rayfield:Notify({
+            Title = "✅ Script Loaded",
+            Content = "Eazvy Hub",
+            Duration = 3
+        })
+    end
+})
+
+-- ===== SCRIPT VIOLANCE =====
+OtherTab:CreateParagraph({
+    Title = "SOON",
+    Content = ""
+})
+
+OtherTab:CreateButton({
+    Name = "SOON",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+        Rayfield:Notify({
+            Title = "✅ Script GAGAL (SOON)",
+            Content = "SOON",
+            Duration = 3
+        })
+    end
+})
 
 -- ===== NOTES (BUTTON DISCORD) =====
 NotesTab:CreateButton({
