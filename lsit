@@ -89,6 +89,7 @@ NotesTab:CreateParagraph({
 -- ===== DATA GUNUNG =====
 local Mountains = {
 
+    ["🌈 MT RAINBOW RUSH"] = { placeId = 99041455205954, script = "https://raw.githubusercontent.com/robloxonly981-gif/ghk/refs/heads/main/n" },
     ["⭐ MT APEXIA V2"] = { placeId = 140438064820571, script = "https://raw.githubusercontent.com/NanaoGames/fgdj/refs/heads/main/n" },
     ["🌲 MT JASUN"] = { placeId = 74503112625421, script = "https://raw.githubusercontent.com/NanaoGames/sdg/refs/heads/main/n" },
     ["⚡ MT VELORA"] = { placeId = 135285569232987, script = "https://raw.githubusercontent.com/NanaoGames/zgdh/refs/heads/main/n" },
