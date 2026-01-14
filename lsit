@@ -71,17 +71,17 @@ OtherTab:CreateButton({
 
 -- ===== SCRIPT VIOLANCE =====
 OtherTab:CreateParagraph({
-    Title = "SOON",
-    Content = ""
+    Title = "SAVE TELEPORT (NEW UPDATE)",
+    Content = "BY NANAO"
 })
 
 OtherTab:CreateButton({
-    Name = "SOON",
+    Name = "SAVE TELEPORT (NEW UPDATE)",
     Callback = function()
-        loadstring(game:HttpGet(""))()
+        loadstring(game:HttpGet("https://github.com/APAJE-PRJT/fhsd/blob/main/svtele"))()
         Rayfield:Notify({
-            Title = "✅ Script GAGAL (SOON)",
-            Content = "SOON",
+            Title = "✅ Script LOADED",
+            Content = "SCRIPT GA SAVED CHECKPOINT OTOMATIS",
             Duration = 3
         })
     end
