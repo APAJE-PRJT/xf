@@ -57,6 +57,18 @@ OtherTab:CreateButton({
     end
 })
 
+OtherTab:CreateButton({
+    Name = "HITBOX",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/APAJE-PRJT/fjg/refs/heads/main/n"))()
+        Rayfield:Notify({
+            Title = "✅ Script Loaded",
+            Content = "HITBOX",
+            Duration = 3
+        })
+    end
+})
+
 -- ===== SCRIPT VIOLANCE =====
 OtherTab:CreateParagraph({
     Title = "SOON",
