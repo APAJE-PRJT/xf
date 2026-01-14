@@ -1,4 +1,3 @@
-
 --==================================================
 -- 🏔️ RAYFIELD MOUNTAIN HUB
 -- Total | Auto Detect | Highlight
@@ -41,6 +40,18 @@ OtherTab:CreateButton({
         Rayfield:Notify({
             Title = "✅ Script Loaded",
             Content = "Eazvy Hub",
+            Duration = 3
+        })
+    end
+})
+
+OtherTab:CreateButton({
+    Name = "WALK BYPASS (FE)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/robloxonly981-gif/hjdf/refs/heads/main/n"))()
+        Rayfield:Notify({
+            Title = "✅ Script Loaded",
+            Content = "WALK BYPASS (BISA SETTING SPEED)",
             Duration = 3
         })
     end
@@ -89,6 +100,7 @@ NotesTab:CreateParagraph({
 -- ===== DATA GUNUNG =====
 local Mountains = {
 
+    ["🚀 MT SPACE X"] = { placeId = 137704808682889, script = "https://raw.githubusercontent.com/robloxonly981-gif/jig/refs/heads/main/n" },
     ["🌈 MT RAINBOW RUSH"] = { placeId = 99041455205954, script = "https://raw.githubusercontent.com/robloxonly981-gif/ghk/refs/heads/main/n" },
     ["⭐ MT APEXIA V2"] = { placeId = 140438064820571, script = "https://raw.githubusercontent.com/NanaoGames/fgdj/refs/heads/main/n" },
     ["🌲 MT JASUN"] = { placeId = 74503112625421, script = "https://raw.githubusercontent.com/NanaoGames/sdg/refs/heads/main/n" },
