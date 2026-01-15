@@ -1,3 +1,4 @@
+
 --==================================================
 -- 🏔️ RAYFIELD MOUNTAIN HUB
 -- Total | Auto Detect | Highlight
@@ -78,7 +79,7 @@ OtherTab:CreateParagraph({
 OtherTab:CreateButton({
     Name = "SAVE TELEPORT (NEW UPDATE)",
     Callback = function()
-        loadstring(game:HttpGet("https://github.com/APAJE-PRJT/fhsd/blob/main/svtele"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/APAJE-PRJT/dghfd/refs/heads/main/sdgf"))()
         Rayfield:Notify({
             Title = "✅ Script LOADED",
             Content = "SCRIPT GA SAVED CHECKPOINT OTOMATIS",
